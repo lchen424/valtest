@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Question</title>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <a href="yay.html"><button class="button" id="yesButton" role="button">Yes</button></a>
+    <button class="button" id="noButton">No</button>
+
+    <img src="https://media.giphy.com/media/lgPVnjdVYshd8MfhYR/giphy.gif" alt="heart1" class="img1" >
+    <img src="https://media.giphy.com/media/lgPVnjdVYshd8MfhYR/giphy.gif" alt="heart2" class="img2" >
+
+    <audio id="hoverAudio" src="audio/boom.mp3"></audio>
+
+    <script>
+        const movingButton = document.getElementById('noButton');
+        const hoverAudio = document.getElementById('hoverAudio');
+
+        movingButton.addEventListener('mouseover', () => {
+            playAudio();
+            moveButtonRandomly();
+        });
+
+        function moveButtonRandomly() {
+        const screenWidth = window.innerWidth - movingButton.offsetWidth;
+        const screenHeight = window.innerHeight - movingButton.offsetHeight;
+
+        const randomX = Math.floor(Math.random() * screenWidth);
+        const randomY = Math.floor(Math.random() * screenHeight);
+
+        movingButton.style.left = `${randomX}px`;
+        movingButton.style.top = `${randomY}px`;
+        }
+
+        function playAudio() {
+        hoverAudio.currentTime = 0; // Reset audio to the beginning
+        hoverAudio.play();
+        }
+
+    </script>
+</body>
+</html>
+

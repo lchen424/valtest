@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>YAY</title>
+</head>
+<body>
+
+    <h2>Great!</h2>
+    <h3>See you on Feburary 14th!</h3>
+
+    <button id="playButton" class="button">Rizz</button>
+
+    <!-- <img src="https://tenor.com/view/happy-cat-cat-kedy-mutlukedy-gif-5853214187617629569" alt="Your GIF" class="img1" > -->
+
+    <audio id="myAudio">
+      <source src="audio/song.mp3" type="audio/mp3">
+      <source src="audio/happy.mp3" type="audio/mp3">
+    </audio>
+
+  
+    <script>
+      const playButton = document.getElementById('playButton');
+      const myAudio = document.getElementById('myAudio');
+  
+      // Add an event listener to play the audio when the button is clicked
+      playButton.addEventListener('click', function() {
+        if (myAudio.paused) {
+        myAudio.play();
+        playButton.textContent = 'Rizzed';
+      } else {
+        myAudio.pause();
+        playButton.textContent = 'Rizz';
+      }
+    });
+  
+      // Optionally, you can also add an event listener to restart the audio when it ends
+      myAudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+      });
+    </script>
+</body>
+</html>

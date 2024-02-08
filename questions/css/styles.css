@@ -1,0 +1,140 @@
+
+
+h1, h2, h3{
+    color: #fee6e3;
+    font-family: Inter,sans-serif;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    font-size: 80px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #111;
+}
+
+h1{
+  position: absolute;
+  top: 23%;
+  left: 16%;
+}
+
+h2{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+h3{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+
+
+
+.img1 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+.img2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 25%;
+    right: 4%;
+}
+
+
+/* 
+button css source:
+afterhttps://getcssscan.com/css-buttons-examples */
+
+
+.button {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+
+.button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+
+#yesButton {
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    /* transform: translate(-50%, -50%); */
+    }
+
+#noButton {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    /* transform: translate(-50%, -50%); */
+    }
+
+#okButton {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    font-size: 20px;
+    }
+
+#playButton {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  font-size: 20px;
+}
+
+
